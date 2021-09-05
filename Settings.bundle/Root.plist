@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>adaptiveRateNonlinear_enabled</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 	</array>
 </dict>
