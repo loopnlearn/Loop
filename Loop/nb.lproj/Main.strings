@@ -80,7 +80,7 @@
 "SQx-au-ZcM.text" = "g KaB";
 
 /* Class = "UINavigationItem"; title = "Add/Edit Carb Entry"; ObjectID = "Tz7-80-bJ7"; */
-"Tz7-80-bJ7.title" = "Add/Edit Carb Entry";
+"Tz7-80-bJ7.title" = "Legg til/endre karbohydrater";
 
 /* Class = "UINavigationItem"; title = "Carbohydrates"; ObjectID = "Vpi-5b-bY5"; */
 "Vpi-5b-bY5.title" = "Karbohydrater";
@@ -89,7 +89,7 @@
 "Wk3-xv-IM5.text" = "4 timer";
 
 /* Class = "UILabel"; text = "Amount Consumed"; ObjectID = "Wx8-Tf-FnG"; */
-"Wx8-Tf-FnG.text" = "Amount Consumed";
+"Wx8-Tf-FnG.text" = "Karbohydrater";
 
 /* Class = "UITextField"; placeholder = "0"; ObjectID = "Yf6-fw-Gex"; */
 "Yf6-fw-Gex.placeholder" = "0";
@@ -101,7 +101,7 @@
 "aiu-ZA-zVa.title" = "Bolus";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "ap1-M6-naG"; */
-"ap1-M6-naG.text" = "Food Type";
+"ap1-M6-naG.text" = "Mattype";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bIL-Ub-qYp"; */
 "bIL-Ub-qYp.text" = "Etikett";
@@ -149,7 +149,7 @@
 "pi6-Dh-72V.title" = "Insulinmodell";
 
 /* Class = "UILabel"; text = "Food Type"; ObjectID = "qPH-vU-xlu"; */
-"qPH-vU-xlu.text" = "Food Type";
+"qPH-vU-xlu.text" = "Mattype";
 
 /* Class = "UILabel"; text = "Glucose"; ObjectID = "tuw-av-A3x"; */
 "tuw-av-A3x.text" = "Glukose";

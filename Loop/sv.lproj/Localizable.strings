@@ -82,12 +82,6 @@
 /* Title of the carb entry absorption time cell */
 "Absorption Time" = "Absorptionstid";
 
-/* */
-"Amount Consumed" = "Mängd kolhydrater";
-
-/* */
-"Food Type" = "Typ av mat";
-
 /* Carb entry section footer text explaining absorption time */
 "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Välj en längre absorptionstid för måltid med mycket fett eller protein. Ofta är det bäst att dela upp måltiden i snabba och långsamma kolhydrater och mata in dessa var för sig.";
 

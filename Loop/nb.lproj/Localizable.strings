@@ -71,19 +71,19 @@
 "Add Carb Entry" = "Legg til karbohydrater";
 
 /* */
-"Edit Carb Entry" = "Edit Carb Entry";
+"Edit Carb Entry" = "Rediger karbohydrater";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Carb Entry";
+"Carb Entry" = "Karbohydrater";
 
 /* Title of the carb entry date picker cell */
-"Date" = "Date";
+"Date" = "Dato";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorption Time";
+"Absorption Time" = "Absorbsjonstid";
 
 /* Carb entry section footer text explaining absorption time */
-"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Velg en lengre absorpsjonstid for større måltider, eller de som inneholder fett og proteiner. Dette er bare veiledning til algoritmen, og trenger ikke å være nøyaktig.";
 
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
@@ -448,7 +448,7 @@
 
 "Max basal limit" = "Maks basalgrense";
 
-"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting.\nThis setting is ignored if microboluses are disabled." = "Begrenser maksimal midlertidig basalrate til et multiplum av programmert basalrate. Verdien kan ikke overstige innstillingen for maksimal basalgrense.\nDenne innstillingen ignoreres hvis mikroboluser er deaktivert.";
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Begrenser maksimal midlertidig basalrate til et multiplum av programmert basalrate. Verdien kan ikke overstige innstillingen for maksimal basalgrense. Denne innstillingen ignoreres hvis mikroboluser er deaktivert.";
 
 "Temporary overrides" = "Midlertidig overstyring";
 
