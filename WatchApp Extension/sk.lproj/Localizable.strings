@@ -22,7 +22,7 @@
 "Net Basal Rate" = "Čistá Hodnota Bazálu";
 
 /* The text for the Watch button for enabling a temporary override */
-"Override" = "Override";
+"Override" = "Režim";
 
 /* The label and value showing the recommended bolus */
 "Rec: %@ U" = "Odpr: %@ J";

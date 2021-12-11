@@ -50,7 +50,7 @@
                                             </items>
                                         </group>
                                         <label alignment="center" text="10:09 AM" id="Ury-of-vQg">
-                                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <color key="textColor" systemColor="lightTextColor"/>
                                             <fontDescription key="font" type="system" pointSize="15"/>
                                         </label>
                                         <separator alignment="left" id="psX-Zk-dTM">
@@ -224,8 +224,11 @@
                                                         </items>
                                                         <color key="backgroundColor" name="carbs-dark"/>
                                                         <variation key="device=watch38mm" height="54" radius="27" width="54"/>
+                                                        <variation key="device=watch40mm" height="54" width="54"/>
                                                         <variation key="device=watch41mm" height="54" radius="27" width="54"/>
+                                                        <variation key="device=watch42mm" height="54" width="54"/>
                                                         <variation key="device=watch44mm" height="54" radius="32" width="54"/>
+                                                        <variation key="device=watch45mm" height="54" width="54"/>
                                                     </group>
                                                     <connections>
                                                         <action selector="togglePreMealMode" destination="rNf-Mh-tID" id="p9f-dP-MI2"/>
@@ -248,8 +251,11 @@
                                                         </items>
                                                         <color key="backgroundColor" name="workout-dark"/>
                                                         <variation key="device=watch38mm" height="54" radius="27" width="54"/>
+                                                        <variation key="device=watch40mm" height="54" width="54"/>
                                                         <variation key="device=watch41mm" height="54" radius="27" width="54"/>
+                                                        <variation key="device=watch42mm" height="54" width="54"/>
                                                         <variation key="device=watch44mm" height="54" radius="32" width="64"/>
+                                                        <variation key="device=watch45mm" height="54" width="54"/>
                                                     </group>
                                                     <connections>
                                                         <action selector="toggleOverride" destination="rNf-Mh-tID" id="pMD-b9-FoF"/>
@@ -265,9 +271,11 @@
                                 </group>
                             </items>
                             <variation key="device=watch38mm" spacing="6"/>
-                            <variation key="device=watch41mm" layout="vertical" spacing="1">
-                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="23"/>
-                            </variation>
+                            <variation key="device=watch40mm" spacing="8"/>
+                            <variation key="device=watch41mm" spacing="6"/>
+                            <variation key="device=watch42mm" spacing="8"/>
+                            <variation key="device=watch44mm" spacing="8"/>
+                            <variation key="device=watch45mm" spacing="6"/>
                         </group>
                     </items>
                     <variation key="device=watch38mm" spacing="5"/>

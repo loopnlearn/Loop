@@ -80,7 +80,7 @@
 "Date" = "Dato";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorbsjonstid";
+"Absorption Time" = "Absorpsjonstid";
 
 /* Carb entry section footer text explaining absorption time */
 "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Velg en lengre absorpsjonstid for større måltider, eller de som inneholder fett og proteiner. Dette er bare veiledning til algoritmen, og trenger ikke å være nøyaktig.";
@@ -206,7 +206,7 @@
 "Current glucose of %1$@ is below correction range." = "Nåværende blodsukker på %1$@ er under korreksjonsområde.";
 
 /* The title of the cell indicating a generic temporary override is enabled */
-"Custom Override" = "Tilpassede overstyringer";
+"Custom Override" = "Tilpasset overstyring";
 
 /* The title of the Loggly customer token credential */
 "Customer Token" = "Kunde-nøkkel";
@@ -248,7 +248,7 @@
 "Glucose" = "Blodsukker";
 
 /* The error message when glucose data is too old to be used. (1: glucose data age in minutes) */
-"Glucose data is %1$@ old" = "Blodsukkerdata er %1$@ gammel";
+"Glucose data is %1$@ old" = "Blodsukkerdata er %1$@ gammelt";
 
 /* Description of error when glucose data is missing */
 "Glucose data not available" = "Blodsukkerdata er utilgjengelig";
@@ -500,7 +500,7 @@
 
 "Allow MBs when the sensor value is invalid" = "Tillat MB når sensor gir ugyldig verdi";
 
-"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Et utropstegn ved glukoseverdien markerer at kilden til sensordata vurderer målingen som usikker eller ugyldig. Det blir da ikke levert mikroboluser. Slå på innstillingen for å overstyre denne sikkerhetsmekanismen.";
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Et utropstegn ved blodsukkerverdien markerer at kilden til sensordata vurderer målingen som usikker eller ugyldig. Det blir da ikke levert mikroboluser. Slå på innstillingen for å overstyre denne sikkerhetsmekanismen.";
 
 "Other FreeAPS settings" = "Andre innstillinger for FreeAPS";
 
