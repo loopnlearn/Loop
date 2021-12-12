@@ -68,19 +68,19 @@
 "Active Insulin: %@" = "Aktivt insulin: %@";
 
 /* Title of the user activity for adding carbs */
-"Add Carb Entry" = "Legg til karbo";
+"Add Carb Entry" = "Legg til karbohydrater";
 
 /* */
-"Edit Carb Entry" = "Rediger karbo";
+"Edit Carb Entry" = "Rediger karbohydrater";
 
 /* Back button text for bolus screen to return to carb entry screen */
-"Carb Entry" = "Karbo";
+"Carb Entry" = "Karbohydrater";
 
 /* Title of the carb entry date picker cell */
 "Date" = "Dato";
 
 /* Title of the carb entry absorption time cell */
-"Absorption Time" = "Absorbsjonstid";
+"Absorption Time" = "Absorpsjonstid";
 
 /* Carb entry section footer text explaining absorption time */
 "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Velg en lengre absorpsjonstid for større måltider, eller de som inneholder fett og proteiner. Dette er bare veiledning til algoritmen, og trenger ikke å være nøyaktig.";
@@ -187,7 +187,7 @@
 "Closed Loop" = "Lukket Loop";
 
 /* The title of the action used to dismiss an error alert */
-"com.loudnate.LoopKit.errorAlertActionTitle" = "OK";
+"com.loudnate.LoopKit.errorAlertActionTitle" = "Ok";
 
 /* The title of the configuration section in settings */
 "Configuration" = "Konfigurasjon";
@@ -206,7 +206,7 @@
 "Current glucose of %1$@ is below correction range." = "Nåværende blodsukker på %1$@ er under korreksjonsområde.";
 
 /* The title of the cell indicating a generic temporary override is enabled */
-"Custom Override" = "Tilpassede overstyringer";
+"Custom Override" = "Tilpasset overstyring";
 
 /* The title of the Loggly customer token credential */
 "Customer Token" = "Kunde-nøkkel";
@@ -331,7 +331,7 @@
 "Predicted glucose at %1$@ is %2$@." = "Forventet blodsukker om %1$@ er %2$@.";
 
 /* Notice message when recommending bolus when BG is below the suspend threshold. (1: glucose value) */
-"Predicted glucose of %1$@ is below your suspend threshold setting." = "Forventet blodsukker %1$@ er under innstilling for insulinstopp";
+"Predicted glucose of %1$@ is below your suspend threshold setting." = "Forventet blodsukker %1$@ er under gitt grense for insulinstopp.";
 
 /* Format string describing retrospective glucose prediction comparison. (1: Predicted glucose)(2: Actual glucose)(3: difference) */
 "Predicted: %1$@\nActual: %2$@ (%3$@)" = "Forespeilet: %1$@\nFaktisk: %2$@ (%3$@)";

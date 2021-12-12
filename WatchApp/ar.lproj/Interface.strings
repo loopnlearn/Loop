@@ -101,7 +101,7 @@
 "nC0-X3-oFJ.text" = "Override";
 
 /* Class = "WKInterfaceController"; title = "Loop"; ObjectID = "rNf-Mh-tID"; */
-"rNf-Mh-tID.title" = "Loop";
+"rNf-Mh-tID.title" = "";
 
 /* Class = "WKInterfaceLabel"; text = "UNITS"; ObjectID = "rV7-d9-n6u"; */
 "rV7-d9-n6u.text" = "UNITS";
@@ -110,7 +110,7 @@
 "smL-Rc-IZh.text" = "Bolus";
 
 /* Class = "WKInterfaceController"; title = "Loop"; ObjectID = "v5b-sO-bb8"; */
-"v5b-sO-bb8.title" = "Loop";
+"v5b-sO-bb8.title" = "";
 
 /* Class = "WKInterfaceMenuItem"; title = "1 hour"; ObjectID = "vL1-NA-WZ1"; */
 "vL1-NA-WZ1.title" = "1 hour";

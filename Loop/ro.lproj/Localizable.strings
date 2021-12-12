@@ -1,21 +1,6 @@
 /* The string format appended to active insulin that describes pending insulin. (1: pending insulin) */
 " (pending: %@)" = " (urmează a fi administrate: %@)";
 
-/* The format for an active override preset. (1: preset symbol)(2: preset name) */
-"%@ %@" = "%1$@ %2$@";
-
-/* Formats absorbed carb value */
-"%@ absorbed" = "%@ absorbiți";
-
-/* The subtitle format describing total insulin. (1: localized insulin total) */
-"%@ U Total" = "%@ U total";
-
-/* Appends a full-stop to a statement */
-"%@." = "%@.";
-
-/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
-"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
-
 /* Format string for carb ratio average. (1: value)(2: carb unit) */
 "%1$@ %2$@/U" = "%1$@ %2$@/U";
 
@@ -34,8 +19,23 @@
 /* The format string for the app name and version number. (1: bundle name)(2: bundle version) */
 "%1$@ v%2$@" = "%1$@ v%2$@";
 
+/* Format string for glucose target range. (1: Min target)(2: Max target)(3: glucose unit) */
+"%1$@ – %2$@ %3$@" = "%1$@ – %2$@ %3$@";
+
 /* Formats (1: carb value) and (2: food type) */
 "%1$@: %2$@" = "%1$@: %2$@";
+
+/* The format for an active override preset. (1: preset symbol)(2: preset name) */
+"%@ %@" = "%1$@ %2$@";
+
+/* Formats absorbed carb value */
+"%@ absorbed" = "%@ absorbiți";
+
+/* The subtitle format describing total insulin. (1: localized insulin total) */
+"%@ U Total" = "%@ U total";
+
+/* Appends a full-stop to a statement */
+"%@." = "%@.";
 
 /* Description of the prediction input effect for glucose momentum */
 "15 min glucose regression coefficient (b₁), continued with decay over 30 min" = "coeficient de regresie glicemică pe 15 min (b₁), continuat cu o diminuare pe 30 min.";
@@ -48,6 +48,9 @@
 
 /* Subtitle of Rapid-Acting – Adult preset */
 "A model based on the published absorption of Humalog, Novolog, and Apidra insulin in adults." = "Un model bazat pe absorbția declarată a insulinei Humalog, Novolog și Apidra la adulți.";
+
+/* Subtitle of Lyumjev preset */
+"A model based on the published absorption of Lyumjev insulin." = "A model based on the published absorption of Lyumjev insulin.";
 
 /* Action to copy the recommended Bolus value to the actual Bolus Field */
 "AcceptRecommendedBolus" = "AcceptRecommendedBolus";
@@ -67,11 +70,35 @@
 /* Title of the user activity for adding carbs */
 "Add Carb Entry" = "Adăugare carbohidrați";
 
+/* */
+"Edit Carb Entry" = "Edit Carb Entry";
+
+/* Back button text for bolus screen to return to carb entry screen */
+"Carb Entry" = "Carb Entry";
+
+/* Title of the carb entry date picker cell */
+"Date" = "Date";
+
+/* Title of the carb entry absorption time cell */
+"Absorption Time" = "Absorption Time";
+
+/* Carb entry section footer text explaining absorption time */
+"Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact." = "Choose a longer absorption time for larger meals, or those containing fats and proteins. This is only guidance to the algorithm and need not be exact.";
+
+/* The button text to save a carb entry without bolusing*/
+"Save without Bolusing" = "Save without Bolusing";
+
+/* Title text for bolus screen following a carb entry */
+"Meal Bolus" = "Meal Bolus";
+
+/* The button text to initiate a bolus */
+"Deliver" = "Deliver";
+
 /* Action sheet title selecting CGM
    Title text for button to set up a CGM */
 "Add CGM" = "Adaugă CGM";
 
-/* The label of the carb entry button */
+/* The label of the meal button */
 "Add Meal" = "Adaugă masă";
 
 /* Action sheet title selecting Pump
@@ -99,6 +126,9 @@
 /* The message displayed during a device authentication prompt for bolus specification */
 "Authenticate to Bolus %@ Units" = "Autentificare pentru bolus %@ unități";
 
+/* (No Comment) */
+"Basal rate (U/h)" = "Basal rate (U/h)";
+
 /* Details for configuration error when basal rate schedule is missing */
 "Basal Rate Schedule" = "Orar rate bazale";
 
@@ -118,6 +148,9 @@
 
 /* The title of the cancel action in an action sheet */
 "Cancel" = "Renunță";
+
+/* (No Comment) */
+"Cancel Temp Basal" = "Cancel Temp Basal";
 
 /* The title of the cell indicating a bolus is being canceled */
 "Canceling Bolus" = "Întrerupere Bolus";
@@ -270,6 +303,12 @@
 /* The notification alert describing a long-lasting loop failure. The substitution parameter is the time interval since the last loop */
 "Loop has not completed successfully in %@" = "Loop nu a rulat cu succes timp de %@";
 
+/* (No Comment) */
+"Manual Temp Basal" = "Manual Temp Basal";
+
+/* (No Comment) */
+"Max basal limit" = "Max basal limit";
+
 /* The error message for missing data. (1: missing data details) */
 "Missing data: %1$@" = "Date lipsă: %1$@";
 
@@ -345,6 +384,9 @@
 /* The title of the services section in settings */
 "Services" = "Servicii";
 
+/* (No Comment) */
+"Set" = "Set";
+
 /* The label of the settings button */
 "Settings" = "Setări";
 
@@ -393,3 +435,77 @@
 /* The label of the workout mode toggle button */
 "Workout Targets" = "Ținte de activitate sportivă";
 
+/*-----------------------------------------------------------------------------*/
+// FreeAPS strings
+
+"Microboluses" = "Microboluses";
+
+"Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus." = "Caution! Microboluses have potential to reduce the safety effects of other mitigations like max temp basal rate. Please be careful!\nThe actual size of a microbolus is always limited to the partial application of recommended bolus.";
+
+"Enable With Carbs" = "Enable With Carbs";
+
+"Enable Without Carbs" = "Enable Without Carbs";
+
+"Partial Bolus Application" = "Partial Bolus Application";
+
+"What part of the recommended bolus will be applied automatically." = "What part of the recommended bolus will be applied automatically.";
+
+"Basal Rate Multiplier" = "Basal Rate Multiplier";
+
+"Max basal limit" = "Max basal limit";
+
+"Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled." = "Limits the maximum basal rate to a multiple of the scheduled basal rate in loop. The value cannot exceed your maximum basal rate setting. This setting is ignored if microboluses are disabled.";
+
+"Temporary overrides" = "Temporary overrides";
+
+"Disable MB by enabling temporary override" = "Disable MB by enabling temporary override";
+
+"If the override's target range starts at the given value or more" = "If the override's target range starts at the given value or more";
+
+"Other Options" = "Other Options";
+
+"Open bolus screen after carbs on watch" = "Open bolus screen after carbs on watch";
+
+"Minimum Bolus Size" = "Minimum Bolus Size";
+
+"Last Event" = "Last Event";
+
+"This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered." = "This is the minimum microbolus size in units that will be delivered. Only if the microbolus calculated is equal to or greater than this number of units will a bolus be delivered.";
+
+"Disabled" = "Disabled";
+
+"Always" = "Always";
+
+"With Carbs" = "With Carbs";
+
+"Without Carbs" = "Without Carbs";
+
+"Export Settings" = "Export Settings";
+
+"Import Settings" = "Import Settings";
+
+"Manual Temp Basal" = "Manual Temp Basal";
+
+"Basal rate (U/h)" = "Basal rate (U/h)";
+
+"Duration" = "Duration";
+
+"%.0f h %02.0f min" = "%.0f h %02.0f min";
+
+"Cancel Temp Basal" = "Cancel Temp Basal";
+
+"Set" = "Set";
+
+"Safety" = "Safety";
+
+"Allow MBs when the sensor value is invalid" = "Allow MBs when the sensor value is invalid";
+
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings.";
+
+"Other FreeAPS settings" = "Other FreeAPS settings";
+
+"Show required carbs on the app badge" = "Show required carbs on the app badge";
+
+"Allow MBs when glucose is below target range" = "Allow MBs when glucose is below target range";
+
+"Retrospective Correction interval" = "Retrospective Correction interval";

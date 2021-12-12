@@ -11,7 +11,7 @@
 "NSFaceIDUsageDescription" = "Face ID sa používa pre autentifikáciu bolusovej dávky inzulínu.";
 
 /* Privacy - Health Share Usage Description */
-"NSHealthShareUsageDescription" = "Údaje o jedle z databázy Zdravie sú používané na stanovenie vplyvov na krvný cukor. Údaje Krvný cukor z databázy Zdravie sú používané na výpočet momenta a grafov. Údaje Spánok z databázy Zdravie sú používané na zlepšenie kompilácie Apple Watch.";
+"NSHealthShareUsageDescription" = "Dáta o jedle z databázy Zdravie sú používané na stanovenie vplyvov na krvný cukor. Dáta Krvný cukor z databázy Zdravie sú používané na výpočet momenta a grafov. Dáta Spánok z databázy Zdravie sú používané na zlepšenie kompilácie Apple Watch.";
 
 /* Privacy - Health Update Usage Description */
-"NSHealthUpdateUsageDescription" = "Údaje o sacharidovom jedle zadané do aplikácie a hodinky sú uložené z databáze Zdravie. Údaje Krvný cukor získané z CGM sú bezpečne uložené v HealthKit.";
+"NSHealthUpdateUsageDescription" = "Dáta o sacharidovom jedle zadané do aplikácie a hodinky sú uložené v databáze Zdravie. Dáta Krvný cukor získané z CGM sú bezpečne uložené v HealthKit.";
