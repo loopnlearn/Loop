@@ -12,6 +12,7 @@ import ShareClient
 import MockKit
 import NightscoutAPIClient
 import xDripClient
+import LibreDirectClient
 
 
 let allCGMManagers: [CGMManager.Type] = [
@@ -21,6 +22,7 @@ let allCGMManagers: [CGMManager.Type] = [
     ShareClientManager.self,
     NightscoutAPIManager.self,
     xDripClientManager.self,
+    LibreDirectClientManager.self,
     MockCGMManager.self,
 ]
 

@@ -65,7 +65,7 @@
 "PA3-sP-cWY.title" = "Forventet blodsukker";
 
 /* Class = "UILabel"; text = "An insulin activity model is used to estimate effects of insulin on glucose levels. An accurate model can help prevent insulin stacking and safely recommend corrective treatments."; ObjectID = "PJv-p9-cFe"; */
-"PJv-p9-cFe.text" = "En insulinaktivitetsmodell brukes til å estimere effekten av insulin på blodsukkeret. En nøyaktig modell kan bidra til å forhindre insulinstacking samt anbefale korrigerende tiltak";
+"PJv-p9-cFe.text" = "En insulinaktivitetsmodell brukes til å estimere effekten av insulin på blodsukkeret. En nøyaktig modell kan bidra til å forhindre insulin-stacking samt anbefale korrigerende tiltak.";
 
 /* Class = "UIButton"; normalTitle = "🍽"; ObjectID = "Qe9-uc-vPR"; */
 "Qe9-uc-vPR.normalTitle" = "🍽";
@@ -128,7 +128,7 @@
 "jQv-xb-gwu.text" = "Detail";
 
 /* Class = "UILabel"; text = "⚠ Glucose Predicted Below Range"; ObjectID = "k0g-P7-OVN"; */
-"k0g-P7-OVN.text" = "⚠ Forventet blodsukker under område";
+"k0g-P7-OVN.text" = "⚠ Forventet blodsukker under korreksjonsområde";
 
 /* Class = "UILabel"; text = "Recommended Basal"; ObjectID = "k3F-Na-7mn"; */
 "k3F-Na-7mn.text" = "Anbefalt basal";
@@ -152,7 +152,7 @@
 "qPH-vU-xlu.text" = "Mattype";
 
 /* Class = "UILabel"; text = "Glucose"; ObjectID = "tuw-av-A3x"; */
-"tuw-av-A3x.text" = "Glukose";
+"tuw-av-A3x.text" = "Blodsukker";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "ufi-Kj-33k"; */
 "ufi-Kj-33k.text" = "Etikett";

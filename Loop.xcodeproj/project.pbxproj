@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		1957BC372748549900FAD366 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D7076651FE06EE4004AC8EA /* Localizable.strings */; };
+		19E856592761248D000FEE0D /* LibreDirectClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E856572761248D000FEE0D /* LibreDirectClient.framework */; };
+		19E8565B2761248D000FEE0D /* LibreDirectClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19E856582761248D000FEE0D /* LibreDirectClientUI.framework */; };
 		2CBB4B0D2582B6820099DDEF /* xDripClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBB4B0C2582B6820099DDEF /* xDripClient.framework */; };
 		2CBB4B0F2582B6A00099DDEF /* xDripClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CBB4B0E2582B6A00099DDEF /* xDripClientUI.framework */; };
 		3804343D23747354004BAB52 /* Microbolus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3804343C23747354004BAB52 /* Microbolus.swift */; };
@@ -735,6 +737,8 @@
 		19DECF202738765100B2F292 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19DECF212738765800B2F292 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19DECF222738765B00B2F292 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		19E856572761248D000FEE0D /* LibreDirectClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LibreDirectClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E856582761248D000FEE0D /* LibreDirectClientUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LibreDirectClientUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E85E0D273EA693000CCFAE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Intents.strings; sourceTree = "<group>"; };
 		19E85E0F273EA693000CCFAE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		19E85E10273EA693000CCFAE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/MainInterface.strings; sourceTree = "<group>"; };
@@ -1225,6 +1229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBB4B0F2582B6A00099DDEF /* xDripClientUI.framework in Frameworks */,
+				19E856592761248D000FEE0D /* LibreDirectClient.framework in Frameworks */,
+				19E8565B2761248D000FEE0D /* LibreDirectClientUI.framework in Frameworks */,
 				2CBB4B0D2582B6820099DDEF /* xDripClient.framework in Frameworks */,
 				434FB6461D68F1CD007B9C70 /* Amplitude.framework in Frameworks */,
 				43A8EC6F210E622700A81379 /* CGMBLEKitUI.framework in Frameworks */,
@@ -1992,6 +1998,8 @@
 		968DCD53F724DE56FFE51920 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19E856572761248D000FEE0D /* LibreDirectClient.framework */,
+				19E856582761248D000FEE0D /* LibreDirectClientUI.framework */,
 				2CBB4B0E2582B6A00099DDEF /* xDripClientUI.framework */,
 				2CBB4B0C2582B6820099DDEF /* xDripClient.framework */,
 				385228E724B3428C00077319 /* BubbleClient.framework */,
@@ -2623,6 +2631,8 @@
 				"$(BUILT_PRODUCTS_DIR)/NightscoutAPIClientUI.framework/NightscoutAPIClientUI",
 				"$(BUILT_PRODUCTS_DIR)/xDripClient.framework/xDripClient",
 				"$(BUILT_PRODUCTS_DIR)/xDripClientUI.framework/xDripClientUI",
+				"$(BUILT_PRODUCTS_DIR)/LibreDirectClient.framework/xLibreDirectClient",
+				"$(BUILT_PRODUCTS_DIR)/LibreDirectClientUI.framework/LibreDirectClientUI",
 			);
 			name = "Copy Frameworks with Carthage";
 			outputPaths = (
@@ -2645,6 +2655,8 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/NightscoutAPIClientUI.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/xDripClient.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/xDripClientUI.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LibreDirectClient.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LibreDirectClientUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3792,7 +3804,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Loop/Loop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Loop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -3814,7 +3826,7 @@
 				CODE_SIGN_ENTITLEMENTS = Loop/Loop.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = Loop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -3834,7 +3846,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WatchApp Extension/WatchApp Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
 				INFOPLIST_FILE = "WatchApp Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -3860,7 +3872,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WatchApp Extension/WatchApp Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
 				INFOPLIST_FILE = "WatchApp Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -3884,7 +3896,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = WatchApp/Info.plist;
@@ -3908,7 +3920,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/watchOS";
 				IBSC_MODULE = WatchApp_Extension;
 				INFOPLIST_FILE = WatchApp/Info.plist;
@@ -4011,7 +4023,7 @@
 				CODE_SIGN_ENTITLEMENTS = Learn/Learn.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Learn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4039,7 +4051,7 @@
 				CODE_SIGN_ENTITLEMENTS = Learn/Learn.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Learn/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -4201,7 +4213,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Loop Status Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -4225,7 +4237,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T7VZ6LU6H3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Loop Status Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

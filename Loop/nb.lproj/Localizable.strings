@@ -248,7 +248,7 @@
 "Glucose" = "Blodsukker";
 
 /* The error message when glucose data is too old to be used. (1: glucose data age in minutes) */
-"Glucose data is %1$@ old" = "Blodsukkerdata er %1$@ gammel";
+"Glucose data is %1$@ old" = "Blodsukkerdata er %1$@ gammelt";
 
 /* Description of error when glucose data is missing */
 "Glucose data not available" = "Blodsukkerdata er utilgjengelig";
@@ -500,7 +500,7 @@
 
 "Allow MBs when the sensor value is invalid" = "Tillat MB når sensor gir ugyldig verdi";
 
-"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Et utropstegn ved glukoseverdien markerer at kilden til sensordata vurderer målingen som usikker eller ugyldig. Det blir da ikke levert mikroboluser. Slå på innstillingen for å overstyre denne sikkerhetsmekanismen.";
+"Sometimes you may see an exclamation mark next to the glucose value. In such cases microboluses will not be applied. Turn this setting on if you want to ignore warnings." = "Et utropstegn ved blodsukkerverdien markerer at kilden til sensordata vurderer målingen som usikker eller ugyldig. Det blir da ikke levert mikroboluser. Slå på innstillingen for å overstyre denne sikkerhetsmekanismen.";
 
 "Other FreeAPS settings" = "Andre innstillinger for FreeAPS";
 
