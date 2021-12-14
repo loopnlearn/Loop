@@ -62,6 +62,7 @@ struct MicrobolusView: View {
         Section(header: Text("Temporary overrides").font(.headline)) {
             Toggle (isOn: $viewModel.disableByOverride) {
                 Text("Disable MB by enabling temporary override")
+                    .frame(height: 65.0)
             }
 
             VStack(alignment: .leading) {
@@ -70,7 +71,7 @@ struct MicrobolusView: View {
                     TextField("0", text: $viewModel.lowerBound)
                     .keyboardType(.decimalPad)
                     .multilineTextAlignment(.trailing)
-                    .frame(height: 38)
+                    .frame(height: 38.0)
 
                     Text(viewModel.unit.localizedShortUnitString)
                 }
