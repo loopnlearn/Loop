@@ -53,12 +53,13 @@ extension InsulinCorrection {
         let minBasalRateEnabled = UserDefaults.standard.bool(forKey: "minBasalRateEnabled")
         let minBasalRateValue = UserDefaults.standard.double(forKey: "minBasalRateValue")
         // take no action if setting is disabled
-        //    or if requested min rate is greater than scheduled rate
-        //    or if requested min rate < 0.05
+        //    or if requested min rate < 0.01
+        //    limit min rate to be no greater than scheduled rate
         if (minBasalRateEnabled &&
-            minBasalRateValue >= 0.05 ) {
-            minBasalAllowed = minBasalRateValue
-       }
+            minBasalRateValue >= 0.01) {
+            minBasalAllowed = Swift.min(minBasalRateValue, scheduledBasalRate)
+            print("*** ===== minBasalRate Patch enabled: request", minBasalRateValue, "U/hr, allowed", minBasalAllowed, "U/hr")
+        }
 
         switch self {
         case .aboveRange, .inRange, .entirelyBelowRange:
@@ -70,7 +71,6 @@ extension InsulinCorrection {
         rate = Swift.min(maxBasalRate, Swift.max(minBasalAllowed, rate))
 
         rate = rateRounder?(rate) ?? rate
-
         return TempBasalRecommendation(
             unitsPerHour: rate,
             duration: duration
