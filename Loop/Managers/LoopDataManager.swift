@@ -1644,8 +1644,37 @@ extension LoopDataManager {
 
             let dosingRecommendation: AutomaticDoseRecommendation?
 
-            switch settings.automaticDosingStrategy {
-            case .automaticBolus:
+            // Dynamic Application Factor and Strategy Switching
+
+            // Set to the hard coded 0.4
+            var alternateApplicationFactor = LoopConstants.bolusPartialApplicationFactor;
+
+            let alternatePAFEnabled = UserDefaults.standard.bool(forKey: "alternatePAFEnabled")
+            let alternatePAFSetting = UserDefaults.standard.double(forKey: "alternatePAFSetting")
+
+            let dosingStrategyAutomationEnabled = UserDefaults.standard.bool(forKey: "dosingStrategyAutomationEnabled")
+            let dosingStrategyThreshold = UserDefaults.standard.double(forKey: "dosingStrategyThreshold")
+
+            if (alternatePAFEnabled && alternatePAFSetting != 0) {
+                alternateApplicationFactor = alternatePAFSetting
+            }
+
+            var switcherIsAB = false;
+
+            if (dosingStrategyAutomationEnabled && dosingStrategyThreshold != 0) {
+                if( glucose.quantity > HKQuantity(unit : settings.glucoseUnit ?? .milligramsPerDeciliter, doubleValue: dosingStrategyThreshold) && settings.automaticDosingStrategy == .automaticBolus){
+                     switcherIsAB = true;
+                 } else {
+                     switcherIsAB = false;
+                 }
+            } else if (settings.automaticDosingStrategy == .automaticBolus) {
+                switcherIsAB = true;
+            }
+
+            UserDefaults.standard.set(settings.glucoseUnit?.unitString ?? HKUnit.milligramsPerDeciliter.unitString, forKey: "settingsGlucoseUnit")
+
+            switch switcherIsAB {
+            case true:
                 let volumeRounder = { (_ units: Double) in
                     return self.delegate?.roundBolusVolume(units: units) ?? units
                 }
@@ -1657,14 +1686,14 @@ extension LoopDataManager {
                     sensitivity: insulinSensitivity!,
                     model: doseStore.insulinModelProvider.model(for: pumpInsulinType),
                     basalRates: basalRates!,
-                    maxAutomaticBolus: maxBolus! * LoopConstants.bolusPartialApplicationFactor,
-                    partialApplicationFactor: LoopConstants.bolusPartialApplicationFactor * self.timeBasedDoseApplicationFactor,
+                    maxAutomaticBolus: maxBolus! * alternateApplicationFactor,
+                    partialApplicationFactor: alternateApplicationFactor * self.timeBasedDoseApplicationFactor,
                     lastTempBasal: lastTempBasal,
                     volumeRounder: volumeRounder,
                     rateRounder: rateRounder,
                     isBasalRateScheduleOverrideActive: settings.scheduleOverride?.isBasalRateScheduleOverriden(at: startDate) == true
                 )
-            case .tempBasalOnly:
+            case false:
                 let temp = predictedGlucose.recommendedTempBasal(
                     to: glucoseTargetRange!,
                     at: predictedGlucose[0].startDate,
