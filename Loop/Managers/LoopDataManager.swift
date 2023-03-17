@@ -1690,13 +1690,42 @@ extension LoopDataManager {
             let automaticDosingIOBLimit = maxBolus! * 2.0
             let iobHeadroom = automaticDosingIOBLimit - self.insulinOnBoard!.value
 
-            switch settings.automaticDosingStrategy {
-            case .automaticBolus:
+            // Dynamic Application Factor and Strategy Switching
+
+            // Default to the LoopConstants value
+            var alternateApplicationFactor = LoopConstants.bolusPartialApplicationFactor;
+
+            let alternatePAFEnabled = UserDefaults.standard.bool(forKey: "alternatePAFEnabled")
+            let alternatePAFSetting = UserDefaults.standard.double(forKey: "alternatePAFSetting")
+
+            let dosingStrategyAutomationEnabled = UserDefaults.standard.bool(forKey: "dosingStrategyAutomationEnabled")
+            let dosingStrategyThreshold = UserDefaults.standard.double(forKey: "dosingStrategyThreshold")
+
+            if (alternatePAFEnabled && alternatePAFSetting != 0) {
+                alternateApplicationFactor = alternatePAFSetting
+            }
+
+            var switcherIsAB = false;
+
+            if (dosingStrategyAutomationEnabled && dosingStrategyThreshold != 0) {
+                if( glucose.quantity > HKQuantity(unit : settings.glucoseUnit ?? .milligramsPerDeciliter, doubleValue: dosingStrategyThreshold) && settings.automaticDosingStrategy == .automaticBolus){
+                     switcherIsAB = true;
+                 } else {
+                     switcherIsAB = false;
+                 }
+            } else if (settings.automaticDosingStrategy == .automaticBolus) {
+                switcherIsAB = true;
+            }
+
+            UserDefaults.standard.set(settings.glucoseUnit?.unitString ?? HKUnit.milligramsPerDeciliter.unitString, forKey: "settingsGlucoseUnit")
+
+            switch switcherIsAB {
+            case true:
                 let volumeRounder = { (_ units: Double) in
                     return self.delegate?.roundBolusVolume(units: units) ?? units
                 }
 
-                let maxAutomaticBolus = min(iobHeadroom, maxBolus! * LoopConstants.bolusPartialApplicationFactor)
+                let maxAutomaticBolus = min(iobHeadroom, maxBolus! * alternateApplicationFactor)
 
                 dosingRecommendation = predictedGlucose.recommendedAutomaticDose(
                     to: glucoseTargetRange!,
@@ -1706,13 +1735,13 @@ extension LoopDataManager {
                     model: doseStore.insulinModelProvider.model(for: pumpInsulinType),
                     basalRates: basalRateSchedule!,
                     maxAutomaticBolus: maxAutomaticBolus,
-                    partialApplicationFactor: LoopConstants.bolusPartialApplicationFactor * self.timeBasedDoseApplicationFactor,
+                    partialApplicationFactor: alternateApplicationFactor * self.timeBasedDoseApplicationFactor,
                     lastTempBasal: lastTempBasal,
                     volumeRounder: volumeRounder,
                     rateRounder: rateRounder,
                     isBasalRateScheduleOverrideActive: settings.scheduleOverride?.isBasalRateScheduleOverriden(at: startDate) == true
                 )
-            case .tempBasalOnly:
+            case false:
 
                 let temp = predictedGlucose.recommendedTempBasal(
                     to: glucoseTargetRange!,
