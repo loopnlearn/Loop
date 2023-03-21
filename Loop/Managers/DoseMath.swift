@@ -398,12 +398,29 @@ extension Collection where Element: GlucoseValue {
             maxBasalRate = Swift.min(maxThirtyMinuteRateToKeepIOBBelowLimit, maxBasalRate)
         }
 
-        let temp = correction?.asTempBasal(
+        var temp = correction?.asTempBasal(
             scheduledBasalRate: scheduledBasalRate,
             maxBasalRate: maxBasalRate,
             duration: duration,
             rateRounder: rateRounder
         )
+
+        // Basal Lock threshold - Jon Fawcett
+        let basalLockEnabled = UserDefaults.standard.bool(forKey: "basalLockEnabled")
+        let basalLockThreshold = UserDefaults.standard.double(forKey: "basalLockThreshold")
+        let glucoseUnit = UserDefaults.standard.string(forKey: "settingsGlucoseUnit")
+        let hkUnit = glucoseUnit == HKUnit.millimolesPerLiter.unitString ? HKUnit.millimolesPerLiter : HKUnit.milligramsPerDeciliter
+
+        if (basalLockEnabled && basalLockThreshold != 0) {
+            if (( temp?.unitsPerHour ?? scheduledBasalRate < scheduledBasalRate  ||
+                 lastTempBasal?.unitsPerHour ?? scheduledBasalRate < scheduledBasalRate
+                 ) &&
+                 self[0 as! Self.Index].quantity > HKQuantity(unit : hkUnit, doubleValue: basalLockThreshold))
+            {
+                print("####### Temp Basal Lock On #########")
+                temp = TempBasalRecommendation(unitsPerHour: scheduledBasalRate, duration: 1800)
+            }
+        }
 
         return temp?.ifNecessary(
             at: date,
@@ -487,6 +504,23 @@ extension Collection where Element: GlucoseValue {
             maxBolusUnits: maxAutomaticBolus,
             volumeRounder: volumeRounder
         )
+
+        // Basal Lock threshold - Jon Fawcett
+        let basalLockEnabled = UserDefaults.standard.bool(forKey: "basalLockEnabled")
+        let basalLockThreshold = UserDefaults.standard.double(forKey: "basalLockThreshold")
+        let glucoseUnit = UserDefaults.standard.string(forKey: "settingsGlucoseUnit")
+        let hkUnit = glucoseUnit == HKUnit.millimolesPerLiter.unitString ? HKUnit.millimolesPerLiter : HKUnit.milligramsPerDeciliter
+
+        if (basalLockEnabled && basalLockThreshold != 0) {
+            if ( (temp?.unitsPerHour ?? scheduledBasalRate < scheduledBasalRate ||
+                  lastTempBasal?.unitsPerHour ?? scheduledBasalRate < scheduledBasalRate
+                  ) &&
+                 self[0 as! Self.Index].quantity > HKQuantity(unit : hkUnit, doubleValue: basalLockThreshold))
+            {
+                temp = TempBasalRecommendation(unitsPerHour: scheduledBasalRate, duration: 1800)
+                print("####### Temp Basal Lock On #########")
+            }
+        }
 
         if temp != nil || bolusUnits > 0 {
             return AutomaticDoseRecommendation(basalAdjustment: temp, bolusUnits: bolusUnits)
