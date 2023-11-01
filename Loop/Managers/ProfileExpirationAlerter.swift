@@ -19,7 +19,7 @@ class ProfileExpirationAlerter {
         
         let now = Date()
         
-        guard let profileExpiration = Bundle.main.profileExpiration, now > profileExpiration - expirationAlertWindow else {
+        guard let profileExpiration = BuildDetails.default.profileExpiration, now > profileExpiration - expirationAlertWindow else {
             return
         }
         
